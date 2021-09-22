@@ -17,7 +17,7 @@
 
 - [Bot Hosting](https://snowsidehosting.com/index.php?rp=/store/discord-bot-hosting) or a [VPS / DPS](https://snowsidehosting.com/index.php?rp=/store/vps)
 - MySQL (Required)
-- NodeJS S V16+](https://nodejs.org/en/) (Required to run the bot)
+- [NodeJS V16+](https://nodejs.org/en/) (Required to run the bot)
 - [git](https://git-scm.com/downloads) (Required to run the bot)
 
 ---
