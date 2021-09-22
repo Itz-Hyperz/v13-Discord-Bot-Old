@@ -1,0 +1,38 @@
+{
+  "name": "hypebotv4",
+  "version": "3.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hyperz"
+  ],
+  "author": "Hyperz#0001",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.6.0",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "discord-canvas": "^1.4.1",
+    "discord-invites13": "^1.0.0",
+    "discord.js": "^13.1.0",
+    "distube": "^3.0.0-beta.36",
+    "express": "^4.17.1",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "fs": "0.0.1-security",
+    "hyperz-nodelogger": "^3.7.1",
+    "jsdom": "^17.0.0",
+    "lyrics-finder": "^21.7.0",
+    "moment": "^2.29.1",
+    "ms": "^2.1.2",
+    "mysql": "^2.18.1",
+    "opus": "^0.0.0",
+    "opusscript": "^0.0.8",
+    "tweetnacl": "^1.0.3",
+    "yt-search": "^2.10.1",
+    "ytdl-core": "^4.9.1"
+  }
+}

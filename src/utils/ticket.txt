@@ -1,0 +1,36 @@
+[HypeTesting#9689 (825162734450638848)]
+• Content: Unknown
+• Embed: 
+    TITLE: New Ticket
+    DESCRIPTION: A support member should be with you shortly, we thank you for your patience at this time.
+
+[Hyperz#0001 (704094587836301392)]
+• Content: wow
+
+[Hyperz#0001 (704094587836301392)]
+• Content: how fun
+
+[Hyperz#0001 (704094587836301392)]
+• Content: lol
+
+[HypeTesting#9689 (825162734450638848)]
+• Content: Ticket successfully archived! (Please wait)
+
+[Hyperz#0001 (704094587836301392)]
+• Content: bruh
+
+[Hyperz#0001 (704094587836301392)]
+• Content: lol
+
+[Hyperz#0001 (704094587836301392)]
+• Content: cringe
+
+[Hyperz#0001 (704094587836301392)]
+• Content: h!archive
+
+[HypeTesting#9689 (825162734450638848)]
+• Content: Please confirm that you wish to archive this ticket.
+
+[HypeTesting#9689 (825162734450638848)]
+• Content: Cancelling ticket archive process.
+

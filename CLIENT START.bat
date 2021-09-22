@@ -1,0 +1,1 @@
+start powershell -noexit -command "node main.js"
