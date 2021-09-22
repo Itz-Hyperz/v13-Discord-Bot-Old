@@ -33,7 +33,7 @@ MySQL (Required)
 - Run the `CLIENT.bat` file
 - Pick what you want to do
 # Run With .c
-- Compile `client.c`
+- Compile `CLIENT.c`
 - Run the compiled file and pick what you want to do
 
 ---
