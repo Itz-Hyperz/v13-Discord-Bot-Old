@@ -13,8 +13,6 @@
 
 # Dependencies:
 
-`NOTE: I will only provide support to customers with a VPS / DPS.`
-
 - [Bot Hosting](https://snowsidehosting.com/index.php?rp=/store/discord-bot-hosting) or a [VPS / DPS](https://snowsidehosting.com/index.php?rp=/store/vps)
 - MySQL (Required)
 - [NodeJS V16+](https://nodejs.org/en/) (Required to run the bot)
