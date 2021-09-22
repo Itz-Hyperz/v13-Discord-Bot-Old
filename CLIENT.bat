@@ -1,3 +1,4 @@
+:: This file was made by anusO1#6969
 @echo off
 color 0a
 echo v13 Discord Bot
