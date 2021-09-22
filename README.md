@@ -4,6 +4,11 @@
 # YOU CANNOT REMOVE ANY CREDITS!!!!
 # YOU CANNOT REMOVE ANY CREDITS!!!!
 
+# Notes
+
+- This bot is **NOT** for resale, this is a public bot, reselling it is breaking the GNU License.
+- If using code, or snippets, **YOU MUST CREDIT** `Hyperz#0001` in your bot / project.
+
 ---
 
 # Dependencies:
