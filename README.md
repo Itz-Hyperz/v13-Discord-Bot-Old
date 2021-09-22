@@ -62,10 +62,10 @@
     },
 ```
 
-`host` - *The IP of the server hosting the DB*
-`user` - *The user you wish to use on the DB (usually root)*
-`password` - *The password to the user account*
-`database` - *The name of the database you are storing your tables in*
+- `host` - *The IP of the server hosting the DB*
+- `user` - *The user you wish to use on the DB (usually root)*
+- `password` - *The password to the user account*
+- `database` - *The name of the database you are storing your tables in*
 
 ---
 
