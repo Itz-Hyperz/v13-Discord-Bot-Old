@@ -27,11 +27,14 @@ MySQL (Required)
 
 - Make sure you have downloaded [NodeJS](https://nodejs.org/en/) (get recommended)
 - Open the bots folder
-- Run the `CLIENT INSTALL.bat` file
-- Wait for it to close automatically
-- Create a new database and import the `install.sql` file into a new database.
 - Edit the `config.js` file to match your information
-- Run the `CLIENT START.bat` file
+- Create a new database and import the `install.sql` file into a new database.
+# Run With .bat
+- Run the `CLIENT.bat` file
+- Pick what you want to do
+# Run With .c
+- Compile `CLIENT.c`
+- Run the compiled file and pick what you want to do
 
 ---
 
