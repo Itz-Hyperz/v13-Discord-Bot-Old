@@ -30,9 +30,8 @@ MySQL (Required)
 - Edit the `config.js` file to match your information
 - Create a new database and import the `install.sql` file into a new database.
 # Run With .bat
-- Run the `CLIENT INSTALL.bat` file
-- Wait for it to close automatically
-- Run the `CLIENT START.bat` file
+- Run the `CLIENT.bat` file
+- Pick what you want to do
 # Run With .c
 - Compile `client.c`
 - Run the compiled file and pick what you want to do
