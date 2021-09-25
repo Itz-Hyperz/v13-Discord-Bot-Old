@@ -176,3 +176,19 @@ You can check your NodeJS Version by running `node -v` in command prompt, powers
 - Scroll down and find "Appearance"
 - Scroll to the bottom and find "Developer Mode"
 - Turn the switch on
+
+---
+
+# Port Requirement
+
+The bot uses a port so it can simply detect whether or not it is online via a "status" page.
+
+![](https://cdn.hyperz.net/9hiw3pos.png)
+
+---
+
+# Debug Mode
+
+Debug mode is STRICTLY designed to show the errors the bot has. Most errors will not be sent in console while `debugmode` is set to `false`. This allows users to keep their console clean and collected!
+
+![](https://cdn.hyperz.net/6vwqjtj2.png)
