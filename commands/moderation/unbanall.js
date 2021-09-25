@@ -17,7 +17,7 @@ const ms = require('ms')
 exports.run = async (client, message, args, con) => {
 
         try {
-            if(message.author.id == message.guild.owner.user.id) {
+            if(message.author.id == message.guild.ownerId) {
                 const someembedlol = new MessageEmbed()
                 .setColor(client.config.colorhex)
                 .setTitle(`Remove Bans`)
