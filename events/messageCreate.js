@@ -64,7 +64,7 @@ module.exports = async(client, con, message) => {
                             await con.query(`UPDATE stats SET counted = 0`, async (err, row) => {
                                 if(err) throw err;
                             });
-                            message.channel.send(`<@${message.author.id}> ruined it at count **${shouldBe - 1}**!\n**Next number is \`1\`**`).then(msg => {
+                            message.channel.send({ content: `<@${message.author.id}> ruined it at count **${shouldBe - 1}**!\n**Next number is \`1\`**` }).then(msg => {
                                 message.delete().catch(e => {})
                             })
                         } else {
