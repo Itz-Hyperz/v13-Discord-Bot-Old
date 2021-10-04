@@ -14,17 +14,14 @@ work on DiscordJS V13! We have hopefull mastered this new land, and we plan to k
 const { MessageEmbed } = require('discord.js');
 
 exports.run = async (client, message, args, con) => {
-
     let deUser;
-
     if(message.mentions.users.first()) {
         deUser = await client.utils.userFetch(client, message.mentions.users.first().id);
-    } else if(!isNaN(args[0])) {
+    } else if (!isNaN(args[0])) {
         deUser = await client.utils.userFetch(client, args[0]);
     } else {
         deUser = message.author;
     }
-
     let embed = new MessageEmbed()
     .setColor(client.config.colorhex)
     .setTitle(`${deUser.username}'s Avatar`)
@@ -36,7 +33,7 @@ exports.run = async (client, message, args, con) => {
         if(client.config.deleteCommands) {
             setTimeout(() => {
                 msg.delete().catch(e => {});
-            }, 14000);
+            }, 16000);
         }
     }).catch(e => {});
 
@@ -45,5 +42,5 @@ exports.run = async (client, message, args, con) => {
 exports.info = {
     name: "avatar",
     description: "Get a users avatar.",
-    aliases: ['stealav', 'stealavatar', 'getavatar', 'grabavatar', 'avgrab']
+    aliases: ['stealav', 'stealavatar', 'getavatar', 'grabavatar', 'avgrab', 'av']
 }
