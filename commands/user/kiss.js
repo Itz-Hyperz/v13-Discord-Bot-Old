@@ -10,44 +10,52 @@ We have tried our very hardest to make this the #1 Discord bot around to date! W
 features that not even some of the current bots around have! As-well with the new updated frame-
 work on DiscordJS V13! We have hopefull mastered this new land, and we plan to keep it that way!
 */
-
 exports.run = async (client, message, args, con) => {
-
-    if(!args[0]) return message.channel.send({ content: "You need to tell me who to kiss" }).then((msg) => {
-        if(client.config.deleteCommands) {
-            setTimeout(() => {
-                msg.delete().catch(e => {});
-            }, 14000);
-        }
-    }).catch(e => {});
-
-    let target;
-    if(message.mentions.users.first()) {
-        target = await client.utils.userFetch(client, message.mentions.users.first().id)
-    } else if(!isNaN(args[0])) {
-        target = await client.utils.userFetch(client, args[0])
-    } else {
-        return message.channel.send({ content: "I can't find that user, sorry." }).then((msg) => {
-            if(client.config.deleteCommands) {
-                setTimeout(() => {
-                    msg.delete().catch(e => {});
-                }, 14000);
-            }
-        }).catch(e => {});
-    }
-
-    message.channel.send({ content: `${message.author.tag} kissed **${target.tag}**!` }).then((msg) => {
-        if(client.config.deleteCommands) {
-            setTimeout(() => {
-                msg.delete().catch(e => {});
-            }, 14000);
-        }
-    }).catch(e => {});
-
-}
-
+	if (!args[0]) return message.channel.send( {
+		content: "You need to tell me who to kiss"
+	}).then(msg => {
+		if (client.config.deleteCommands) {
+			setTimeout(() => {
+				msg["delete"]()["catch"](e =>
+				{})
+			}, 14e3)
+		}
+	})["catch"](e =>
+	{});
+	let kissed;
+	if (message.mentions.users.first()) {
+		kissed = await client.utils.userFetch(client, message.mentions.users.first().id)
+	}
+	else if (!isNaN(args[0])) {
+		kissed = await client.utils.userFetch(client, args[0])
+	}
+	else {
+		return message.channel.send( {
+			content: "I can't find that user, sorry."
+		}).then(msg => {
+			if (client.config.deleteCommands) {
+				setTimeout(() => {
+					msg["delete"]()["catch"](e =>
+					{})
+				}, 14e3)
+			}
+		})["catch"](e =>
+		{})
+	}
+	message.channel.send( {
+		content: `${message.author.tag} kissed **${kissed.tag}**!`
+	}).then(msg => {
+		if (client.config.deleteCommands) {
+			setTimeout(() => {
+				msg["delete"]()["catch"](e =>
+				{})
+			}, 14e3)
+		}
+	})["catch"](e =>
+	{})
+};
 exports.info = {
-    name: "kiss",
-    description: "Kiss a user.",
-    aliases: ['kisss']
-}
+	name: "kiss",
+	description: "Kiss a user.",
+	aliases: ["kisss"]
+};
