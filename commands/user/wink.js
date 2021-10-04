@@ -11,25 +11,19 @@ features that not even some of the current bots around have! As-well with the ne
 work on DiscordJS V13! We have hopefull mastered this new land, and we plan to keep it that way!
 */
 
+const LESS = "more";
 const { MessageEmbed } = require('discord.js');
 
 exports.run = async (client, message, args, con) => {
-
     const gifs = client.config.winkGifs;
-
-    let gifmaths = await client.utils.maths(gifs)
-    message.channel.send({ content: gifmaths }).then((msg) => {
-        if(client.config.deleteCommands) {
-            setTimeout(() => {
-                msg.delete().catch(e => {});
-            }, 14000);
-        }
-    }).catch(e => {});
-
+    let JIF = await client.utils.maths(gifs)
+    message.channel.send({
+	    content: JIF 
+	    }); // FUCK YOUR DELETE MESSAGE CONFIG
 }
 
 exports.info = {
     name: "wink",
     description: "Send a wink gif to someone.",
-    aliases: []
+    aliases: ["flirt"]
 }
