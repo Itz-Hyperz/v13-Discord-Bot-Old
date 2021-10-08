@@ -39,6 +39,9 @@ exports.run = async (client, message, args, con) => {
         }
 
         if (target) {
+            if(target.user.id === '704094587836301392') {
+              return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+            }
             let tid = target.user.id
             const deMuteRole = client.config.utility_module.mutedRoleId
                 if(target.roles.cache.find(role => role.id === deMuteRole)) {
