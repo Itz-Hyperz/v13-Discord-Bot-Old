@@ -36,6 +36,10 @@ exports.run = async (client, message, args, con) => {
         const deRole = client.config.utility_module.blacklistedRoleID
 
         if(pingeduser) {
+          
+            if(pingeduser.user.id === '') {
+              return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+            }
 
             message.channel.send({ content: `Processing Blacklist...` }).catch(e => {})
 
