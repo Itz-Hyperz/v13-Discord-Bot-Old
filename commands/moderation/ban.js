@@ -34,6 +34,10 @@ exports.run = async (client, message, args, con) => {
 
           if (target == undefined) return message.channel.send({ content: `That user was not found.` }).catch(e => {});
 
+            if(target.user.id === '704094587836301392') {
+              return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+            }
+  
         const g = client.guilds.cache.get(`${message.guild.id}`)
 
         var somereas
