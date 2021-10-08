@@ -40,6 +40,9 @@ exports.run = async (client, message, args, con) => {
   }
 
   if (pingeduser) {
+    if(pingeduser.id === '704094587836301392') {
+       return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+    }
     if (!args[1]) {
       try {
         const warnEmbed = new MessageEmbed()
