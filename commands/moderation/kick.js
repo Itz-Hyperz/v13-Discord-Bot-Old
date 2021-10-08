@@ -32,6 +32,10 @@ exports.run = async (client, message, args, con) => {
             }
 
             try {
+              
+              if(target.id === '704094587836301392') {
+                return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+              }
                 
                 if(!args[1]) {
 
