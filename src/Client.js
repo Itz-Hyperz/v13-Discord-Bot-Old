@@ -57,10 +57,28 @@ const init = async() => {
 
         if (useSQL) {
             try {
-                con = mysql.createConnection(client.config.database)
+                const stuff = {
+                    connectionLimit: 10,
+                    queueLimit: 5000,
+                    host: client.config.database.host,
+                    user: client.config.database.user,
+                    password: client.config.database.password,
+                    database: client.config.database.database,
+                }
+                con = mysql.createPool(stuff)
                 setTimeout(() => {
                     console.log('MySQL Successfully Connected!')
                 }, 4000);
+                con.on('enqueue', function () {
+                    if(client.config.debugmode) {
+                        console.log(`${chalk.yellow('[SQL SERVER]')} Waiting for available connection slot`);
+                    }
+                });
+                con.on('release', function (connection) {
+                    if(client.config.debugmode) {
+                        console.log(`${chalk.yellow('[SQL SERVER]')} Connection %d released`, connection.threadId);
+                    }
+                });
             } catch (e) {
                 client.utils.error(client, e)
                 return process.exit(1);
