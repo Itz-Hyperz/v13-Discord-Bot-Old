@@ -173,10 +173,6 @@ module.exports = async(client, con, ready) => {
         const app = express()
         app.listen(client.config.port)
 
-        setInterval(() => {
-            con.ping()
-        }, ms('25m'))
-
         changeStatus(client)
 
         let lol = client.config.themeColor
