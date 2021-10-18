@@ -1,4 +1,4 @@
-install:
+compile:
   gcc CLIENT.c -o CLIENT.o
   
 run:
