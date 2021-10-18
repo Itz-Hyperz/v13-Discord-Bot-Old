@@ -30,8 +30,8 @@
 - Run the `CLIENT.bat` file
 - Pick what you want to do
 # Run With .c
-- Compile `CLIENT.c`
-- Run the compiled file and pick what you want to do
+- `make`
+- Run `CLIENT.o`
 
 ---
 
