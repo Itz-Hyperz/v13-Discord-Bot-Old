@@ -30,7 +30,7 @@
 - Run the `CLIENT.bat` file
 - Pick what you want to do
 # Run With .c
-- `make install` or `make run`
+- `make compile` or `make run`
 - Run `CLIENT.o`
 
 ---
