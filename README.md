@@ -192,3 +192,9 @@ The bot uses a port so it can simply detect whether or not it is online via a "s
 Debug mode is STRICTLY designed to show the errors the bot has. Most errors will not be sent in console while `debugmode` is set to `false`. This allows users to keep their console clean and collected!
 
 ![](https://cdn.hyperz.net/6vwqjtj2.png)
+
+---
+
+# Credits
+
+- [@Hyperz](https://hyperz.net/discord) - *Programming*
