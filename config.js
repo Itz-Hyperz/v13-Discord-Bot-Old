@@ -22,7 +22,7 @@ const _config = {
     copyright: "© 2021 Your Name", // The footer for most embeds
     colorhex: "#426cf5", // The main theme and color of the bot
     voicechanneltojoin: "VOICE_CHANNEL_ID", // A voice channel the bot will sit in on startup
-    deleteCommands: false, // This will decide whether or not to delete commands when they are ran.
+    deleteCommands: true, // This will decide whether or not to delete commands when they are ran.
 
     // Application Settings (REQUIRED)
     themeColor: "blue", // The theme color for the main logger (blue, red, green, yellow, magenta)
