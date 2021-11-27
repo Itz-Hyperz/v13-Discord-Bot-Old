@@ -20,7 +20,7 @@
 
 ---
 
-# Install Guide
+# Install Guide (Basics)
 
 - Make sure you have downloaded [NodeJS](https://nodejs.org/en/) (get recommended)
 - Open the bots folder
