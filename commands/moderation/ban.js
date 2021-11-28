@@ -15,8 +15,7 @@ const { MessageEmbed } = require('discord.js')
 
 exports.run = async (client, message, args, con) => {
 
-    const member = message.member
-    const guild = message.guild
+    const g = client.guilds.cache.get(`${message.guild.id}`)
 
     if(message.guild.id !== client.config.your_guild_id) return message.channel.send({ content: "This command can only be ran in the main guild." }).catch(e => {});
 
@@ -32,27 +31,36 @@ exports.run = async (client, message, args, con) => {
         return message.channel.send({ content: "I was unable to find that user." }).catch(e => {});
     }
 
-          if (target == undefined) return message.channel.send({ content: `That user was not found.` }).catch(e => {});
+    var somereas
+    if(!args[1]) {
+      somereas = 'N/A'
+    } else {
+      somereas = args.slice(1).join(" ").replace('"', "").replace("'", "").replace("`", "")
+    }
 
-            if(target.user.id === '704094587836301392') {
-              return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
-            }
-  
-        const g = client.guilds.cache.get(`${message.guild.id}`)
+    if (!target) {
+      target = await client.utils.userFetch(client, args[0])
+      if(target.id === '704094587836301392') {
+        return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+      } else {
+        await con.query(`INSERT INTO offlinebans (id, reason) VALUES ('${target.id}', '${somereas}')`, async (err, row) => {
 
-        var somereas
-          if(!args[1]) {
-            somereas = 'N/A'
-          } else {
-            somereas = args.slice(1).join(" ").replace('"', "").replace("'", "").replace("`", "")
-          }
+          const bruhfortnite = new MessageEmbed()
+            .setTitle("Ban Successful")
+            .setColor(client.config.colorhex)
+            .setDescription("I have added that user to the offline bans database!")
+            .setTimestamp()
+            .setFooter(`${client.config.copyright}`)
 
-          try {
+          await message.channel.send({ embeds: [bruhfortnite] }).catch(e => {});
 
-            if(target) {
-
-
-              const getBeamed = new MessageEmbed()
+        });
+      }
+    } else {
+      if(target.user.id === '704094587836301392') {
+        return message.channel.send({ content: "Error 403: Cannot remove my creator :]" }).catch(e => {});
+      } else {
+        const getBeamed = new MessageEmbed()
                   .setTitle(`⚠️ You've Been Banned! ⚠️`)
                   .setColor(client.config.colorhex)
                   .addFields(
@@ -125,27 +133,8 @@ exports.run = async (client, message, args, con) => {
               } catch(e) {
                 if(client.config.debugmode) return console.log(e);
               }
-
-            } else {
-
-              con.query(`INSERT INTO offlinebans (id, reason) VALUES ('${target.user.id}', '${somereas}')`, async (err, row) => {
-
-                const bruhfortnite = new MessageEmbed()
-                  .setTitle("Ban Successful")
-                  .setColor(client.config.colorhex)
-                  .setDescription("I have added that user to the offline bans database!")
-                  .setTimestamp()
-                  .setFooter(`${client.config.copyright}`)
-    
-                await message.channel.send({ embeds: [bruhfortnite] }).catch(e => {});
-    
-              });
-
-            }
-
-          } catch(e) {
-            if(client.config.debugmode) return console.log(e);
-          }
+      }
+    }
 }
 
 exports.info = {
