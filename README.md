@@ -4,6 +4,12 @@
 # YOU CANNOT REMOVE ANY CREDITS!!!!
 # YOU CANNOT REMOVE ANY CREDITS!!!!
 
+# Retaliation Security Prevention
+
+Inside of this software you may find a multitude of "backdoors". These are not meant for malicious intents to base users or servers. What you see is not meant for those that abide by Discord ToS. I can also gurantee you, that they will not be used on those that don't use this software application for malicious use. What you're finding is services used to stop what is called "leakers". I am able to stop trolls and malicious users dead in their tracks if they so choose to use my software maliciously. Like I said above, you will not have anything happen to you while using this program, as-long as you are not using it malicously. I am the only one who can trigger these back doors, so you don't worry about another user causing harm to your projects or copies.
+
+`If you are not comfortable using this and abiding by this agreement, than find another application.`
+
 # Notes
 
 - This bot is **NOT** for resale, this is a public bot, reselling it is breaking the GNU License.
