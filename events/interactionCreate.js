@@ -143,6 +143,9 @@ module.exports = async(client, con, interaction) => {
                                     }
                                 })
                                 msgs.forEach(async msg => {
+                                    if(msg.embeds[0]) {
+                                      msg.content = msg.embeds[0].description
+                                    }
                                     let parentContainer = document.createElement("div");
                                     parentContainer.className = "parent-container";
                                     let avatarDiv = document.createElement("div");
