@@ -236,7 +236,8 @@ module.exports = async(client, con, interaction) => {
                         }
         
                             setTimeout(() => {
-                                message.channel.delete().catch(e => {console.log(e)});
+                                if(!message.channel || message.channel == undefined) return;
+                                message.channel.delete().catch(e => {});
                             }, 8000);
             });
         } else if (interaction.customId === 'closeticket') {
@@ -248,6 +249,7 @@ module.exports = async(client, con, interaction) => {
             }
             interaction.reply({ content: `Ticket successfully closed! (Please wait)` })
             setTimeout(() => {
+                if(!message.channel || message.channel == undefined) return;
                 message.channel.delete();
             }, 8000);
         } else if (interaction.customId === 'createticket') {
