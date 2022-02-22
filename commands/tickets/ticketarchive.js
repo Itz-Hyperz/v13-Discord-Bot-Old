@@ -215,6 +215,7 @@ exports.run = async (client, message, args, con) => {
                             });
         
                             setTimeout(() => {
+                                if(!message.channel || message.channel == undefined) return;
                                 message.channel.delete().catch(e => {console.log(e)});
                             }, 8000);
                         }
