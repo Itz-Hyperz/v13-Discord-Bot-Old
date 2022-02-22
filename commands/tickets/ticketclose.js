@@ -32,7 +32,8 @@ exports.run = async (client, message, args, con) => {
                             if(react23847.emoji.name === '✅') {
                                 message.channel.send({ content: `Ticket successfully closed! (Please wait)` })
                                 setTimeout(() => {
-                                    message.channel.delete();
+                                    if(!message.channel || message.channel == undefined) return;
+                                    message.channel.delete().catch(e => {});
                                 }, 8000);
                             }
                             if(react23847.emoji.name === '❌') {
